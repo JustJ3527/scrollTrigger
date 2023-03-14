@@ -1,0 +1,89 @@
+:root {
+    --primaryFont : "Nova Flat", cursive;
+    --darkColor: rgb(7, 7, 7);
+    --lightColor: rgb(255, 255, 255);
+}
+
+$breakpoint1: 820px;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--darkColor);
+    padding: 8% 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $breakpoint1) {
+        padding: 0;
+    }
+
+    .container-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        position: absolute;
+        h1 {
+            text-transform: uppercase;
+            font-family: var(--primaryFont);
+            font-size: 14.5vw;
+            display: inline-block;
+            user-select: none;
+            mix-blend-mode: difference;
+            color: var(--lightColor);
+        }
+    }
+    .container-discover {
+        color: var(--lightColor);
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px 5px 40px 5px;
+        h2 {
+            font-size: 30px;
+            font-family: var(--primaryFont);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+
+            @media screen and (max-width: $breakpoint1) {
+                font-size: 3.5vw;
+            }
+        }
+        i {
+            font-size: 20px;
+        }
+    }
+    .container-img {
+        height: 100%;
+        overflow: hidden;
+        background-image: url(../assets/first.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 3/4;
+        
+        @media screen and (max-width: $breakpoint1) {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: auto;
+            background-size: 150%;
+            background-position-y: 65%;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+}
