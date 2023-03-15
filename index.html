@@ -16,8 +16,15 @@
 </head>
 <body>
     <div class="intro">
-        <div class="panel"></div>
+        <div class="panel" id="panel"></div>
     </div>
+    <nav class="container-navbar">
+        <ul>
+            <li onclick="redirection(); Acceuil()" class="active">Home</li>
+            <li onclick="redirection(); Projects()">Projects</li>
+            <li onclick="redirection(); Contact()">Contact</li>
+        </ul>
+    </nav>
     <div class="smooth-scroll-wrapper">
         <div class="start">
             <div class="container-text" data-scroll data-scroll-speed="2">
