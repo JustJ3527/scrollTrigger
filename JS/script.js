@@ -1,3 +1,9 @@
+//Redicrection
+const panel = document.getElementById("panel");
+function redirection() {
+    panel.style.transform = "none"; 
+}
+
 gsap.registerPlugin(ScrollTrigger);
 
 const body = document.body,
