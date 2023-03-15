@@ -3,6 +3,8 @@
   --primaryFont: "Nova Flat", cursive;
   --darkColor: rgb(7, 7, 7);
   --lightColor: rgb(255, 255, 255);
+  --secondaryLightColor: rgb(0, 119, 157);
+  --navbarHeight: 70px;
 }
 
 * {
@@ -17,7 +19,7 @@ body {
 }
 
 .intro {
-  z-index: 999;
+  z-index: 1000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +38,60 @@ body {
   width: 100%;
   transform-origin: bottom;
   background-color: white;
+  transition: all 0.5s;
+}
+
+@keyframes underlined {
+  00% {
+    background-size: 0 100%;
+    background-position: bottom left;
+  }
+  100% {
+    background-size: 100% 100%;
+    background-position: bottom left;
+  }
+}
+.container-navbar {
+  width: 100%;
+  height: var(--navbarHeight);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  background-color: transparent;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px 20px;
+}
+.container-navbar ul {
+  color: var(--lightColor);
+  display: flex;
+  list-style-type: none;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.container-navbar ul li {
+  margin: 0 20px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: color, background-size, background-position;
+  cursor: pointer;
+  background: linear-gradient(to top, var(--secondaryLightColor), var(--secondaryLightColor), transparent 10.01%) no-repeat left bottom/0 100%;
+}
+.container-navbar ul li.active {
+  background-size: 100% 100%;
+  background-position: bottom left;
+}
+.container-navbar ul li.active:hover {
+  animation: none;
+  color: var(--lightColor);
+}
+.container-navbar ul li:hover {
+  color: var(--secondaryLightColor);
+  animation: underlined 1s both;
+  background-size: 100% 100%;
 }
 
 .smooth-scroll-wrapper {
