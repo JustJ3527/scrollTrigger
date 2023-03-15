@@ -21,6 +21,7 @@ body {
     font-family: var(--primaryFont);
     height: 200vh;
     background-color: var(--darkColor);
+    overflow-x: hidden;
 }
 
 .intro {
@@ -108,6 +109,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .start {
@@ -132,7 +134,7 @@ body {
         position: absolute;
         mix-blend-mode: difference;
         z-index: 2;
-        transform: translateY(50%);
+
         .letter {
             opacity: 1;
             transform: translate(0, 0);

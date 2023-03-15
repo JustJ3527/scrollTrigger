@@ -36,7 +36,7 @@ function smoothScroll() {
 
 smoothScroll();
 
-var markersValue = "True";
+var markersValue = "false";
 
 gsap.to(".panel", {
 	scaleY: 0,
@@ -71,10 +71,9 @@ nameTL
     }, "-=0.85");
 
 gsap.to(".container-text", {
-    yPercent: -100,
+    yPercent: -20,
     ease: "none",
     scrollTrigger: {
-        markers: markersValue,
         trigger: ".container-text",
         // start: "top bottom", // the default values
         // end: "bottom top",
@@ -82,7 +81,7 @@ gsap.to(".container-text", {
     }, 
     });
     gsap.to(".container-img", {
-        yPercent: 50,
+        yPercent: 30,
         ease: "none",
         scrollTrigger: {
             trigger: ".container-img",
