@@ -1,10 +1,20 @@
+gsap.registerPlugin(ScrollTrigger);
+
 //Redicrection
 const panel = document.getElementById("panel");
 function redirection() {
     panel.style.transform = "none"; 
 }
 
-gsap.registerPlugin(ScrollTrigger);
+let mybutton = document.getElementById("navbar");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 150) {
+    mybutton.style.backgroundColor = "var(--darkColor)";
+} else {
+    mybutton.style.backgroundColor = "transparent";
+}
+}
 
 const body = document.body,
     scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
@@ -26,14 +36,6 @@ function smoothScroll() {
 
 smoothScroll();
 
-const w = ".w",
-    e = ".e",
-    l = ".l",
-    c = ".c",
-    o = ".o",
-    m = ".m",
-    e2 = ".e2";
-
 var markersValue = "True";
 
 gsap.to(".panel", {
@@ -54,7 +56,7 @@ nameTL
         stagger: 0.018,
 		duration: 1.6,
 		ease: "power4.inOut"
-    })
+    }, "+=0.85")
 
     .to(".letter", {
         scale: 1,
@@ -67,3 +69,25 @@ nameTL
         duration: 5, 
         ease: "power2.out" 
     }, "-=0.85");
+
+gsap.to(".container-text", {
+    yPercent: -100,
+    ease: "none",
+    scrollTrigger: {
+        markers: markersValue,
+        trigger: ".container-text",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true
+    }, 
+    });
+    gsap.to(".container-img", {
+        yPercent: 50,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".container-img",
+            start: "center 50%", // the default values
+            end: "center top",
+            scrub: true
+        }, 
+      });

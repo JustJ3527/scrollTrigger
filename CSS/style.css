@@ -16,6 +16,8 @@
 
 body {
   font-family: var(--primaryFont);
+  height: 200vh;
+  background-color: var(--darkColor);
 }
 
 .intro {
@@ -63,6 +65,8 @@ body {
   justify-content: end;
   align-items: center;
   padding: 10px 20px;
+  transition: background-color;
+  transition-duration: 0.5s;
 }
 .container-navbar ul {
   color: var(--lightColor);
@@ -70,6 +74,7 @@ body {
   list-style-type: none;
   font-size: 25px;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 .container-navbar ul li {
   margin: 0 20px;
@@ -86,10 +91,8 @@ body {
 }
 .container-navbar ul li.active:hover {
   animation: none;
-  color: var(--lightColor);
 }
 .container-navbar ul li:hover {
-  color: var(--secondaryLightColor);
   animation: underlined 1s both;
   background-size: 100% 100%;
 }
@@ -126,6 +129,7 @@ body {
   position: absolute;
   mix-blend-mode: difference;
   z-index: 2;
+  transform: translateY(50%);
 }
 .start .container-text .letter {
   opacity: 1;
