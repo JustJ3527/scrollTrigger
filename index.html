@@ -14,15 +14,34 @@
 
     <title>Document</title>
 </head>
-<body>
+<body onload="onLoad()">
     <div class="intro">
-        <div class="panel" id="panel"></div>
+        <div class="panel2" id="panel2"></div>
+        <div class="panel1" id="panel1"></div>
     </div>
     <nav class="container-navbar" id="navbar">
-        <ul>
-            <li onclick="redirection(); Acceuil()" class="active">Home</li>
-            <li onclick="redirection(); Projects()">Projects</li>
-            <li onclick="redirection(); Contact()">Contact</li>
+        <ul class="flexbox">
+            <ul>
+                <li class="Name">Jules Antoine</li>
+            </ul>
+            <ul class="navigation-desktop">
+                <li onclick="redirection(); Projects()">Projects</li>
+                <li onclick="redirection(); About()">About</li>
+                <li onclick="redirection(); Contact()">Contact</li>
+            </ul>
+            <input label="burger" class="checkbox" type="checkbox" name="" id="checkbox"/>
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="menu">
+                <ul class="navigation-mobile">
+                    <li onclick="redirection(); Projects()">Projects</li>
+                    <li onclick="redirection(); About()">About</li>
+                    <li onclick="redirection(); Contact()">Contact</li>
+                </ul>
+            </div>
         </ul>
     </nav>
     <div class="smooth-scroll-wrapper">

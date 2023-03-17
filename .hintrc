@@ -8,7 +8,8 @@
       {
         "ignore": [
           "user-select",
-          "aspect-ratio"
+          "aspect-ratio",
+          "width: fit-content"
         ]
       }
     ]
