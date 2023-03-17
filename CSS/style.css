@@ -35,14 +35,15 @@
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--primaryFont);
-  height: 200vh;
   overflow-x: hidden;
   overflow-y: overlay;
-  overflow-x: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 ul {
@@ -293,6 +294,10 @@ ul {
   margin: 10px 5px 40px 5px;
   z-index: 2;
 }
+.start .container-discover a {
+  color: var(--lightColor);
+  text-decoration: none;
+}
 .start .container-discover h2 {
   font-size: 30px;
   font-family: var(--primaryFont);
@@ -328,4 +333,9 @@ ul {
 }
 .start .container-img img {
   height: 100%;
+}
+
+.fullscreen {
+  width: 100%;
+  height: calc(100vh - var(--navbarHeight));
 }/*# sourceMappingURL=style.css.map */

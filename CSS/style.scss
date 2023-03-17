@@ -37,14 +37,14 @@ $breakpoint1: 820px;
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--primaryFont);
-    height: 200vh;
     overflow-x: hidden;
     overflow-y: overlay;
-    overflow-x: hidden;
+    height: fit-content;
 }
 
 ul {
@@ -140,12 +140,6 @@ ul {
             transition-property: color, background-size, background-position;
             cursor: pointer;
             background: linear-gradient(to top, var(--secondaryLightColor), var(--secondaryLightColor), transparent 10.01%) no-repeat left bottom / 0 100%;
-            // &.active {
-            //     background-size: 100% 100%;
-            //     background-position: bottom left;
-            //     &:hover {
-            //         animation: none;
-            //     }
             &:hover {
                 animation: underlined 1s both;
                 background-size: 100% 100%;
@@ -156,7 +150,6 @@ ul {
 }
 
 //navbar responsive
-
 @media screen and (max-width: $breakpoint1) {
     :root {
         --navbarHeight: 55px;
@@ -316,6 +309,10 @@ ul {
         flex-direction: column;
         margin: 10px 5px 40px 5px;
         z-index: 2;
+        a {
+            color: var(--lightColor);
+            text-decoration: none;
+        }
         h2 {
             font-size: 30px;
             font-family: var(--primaryFont);
@@ -352,4 +349,9 @@ ul {
             height: 100%;
         }
     }
+}
+
+.fullscreen {
+    width: 100%;
+    height: calc(100vh - var(--navbarHeight));
 }
