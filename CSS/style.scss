@@ -138,11 +138,13 @@ ul {
             transition-timing-function: ease;
             transition-delay: 0s;
             transition-property: color, background-size, background-position;
+            background: linear-gradient(0deg, var(--secondaryLightColor), var(--secondaryLightColor)) no-repeat right bottom / 0 var(--bg-h);
+            transition: background-size 350ms;
+            --bg-h: 100%;
             cursor: pointer;
-            background: linear-gradient(to top, var(--secondaryLightColor), var(--secondaryLightColor), transparent 10.01%) no-repeat left bottom / 0 100%;
-            &:hover {
-                animation: underlined 1s both;
-                background-size: 100% 100%;
+            &:where(:hover, :focus-visible) {
+                background-size: 100% var(--bg-h);
+                background-position-x: left;
             }
                 
         }

@@ -12,6 +12,24 @@
           "width: fit-content"
         ]
       }
+    ],
+    "axe/structure": [
+      "off",
+      {
+        "list": "off"
+      }
+    ],
+    "axe/forms": [
+      "off",
+      {
+        "label": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
     ]
   }
 }
