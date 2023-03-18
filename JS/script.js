@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 var timeOut;
 const panel1 = document.getElementById("panel1"),
     panel2 = document.getElementById("panel2");
@@ -14,6 +16,10 @@ function onLoad() {
 }
 
 function showPage() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+      });
     panel1.style.transform = "scale(1, -0.2)";
     sleep(200).then(() => {
         panel2.style.transform = "scale(1, 0)";
@@ -79,23 +85,14 @@ gsap.from(".container-img", {
 
 
 //Parallax
-gsap.to(".container-text", {
-    yPercent: -20,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".container-text",
-        // start: "top bottom", // the default values
-        // end: "bottom top",
-        scrub: true
-    }, 
-});
 gsap.to(".container-img", {
-    yPercent: 30,
-    ease: "none",
     scrollTrigger: {
         trigger: ".container-img",
-        start: "center 50%", // the default values
-        end: "center top",
-        scrub: true
-    }, 
-});
+        scrub: true,
+        start: "top 15.8%",
+        end: "bottom top"
+    },
+    yPercent: 25,
+    duration: 3,
+    ease: "none"
+})

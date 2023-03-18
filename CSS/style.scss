@@ -133,7 +133,8 @@ ul {
         }
         li {
             display: inline;
-            margin: 0 20px;
+            margin: 0 15px;
+            padding: 0 5px;
             transition-duration: 0.5s;
             transition-timing-function: ease;
             transition-delay: 0s;
@@ -268,7 +269,8 @@ ul {
 
 .start {
     width: 100%;
-    height: 100vh;
+    margin-top: var(--navbarHeight);
+    height: calc(100vh - var(--navbarHeight));
     background-color: var(--darkColor);
     padding: 8% 0;
     position: relative;
@@ -309,7 +311,7 @@ ul {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 10px 5px 40px 5px;
+        margin: 10px 5px 50px 5px;
         z-index: 2;
         a {
             color: var(--lightColor);
@@ -356,4 +358,6 @@ ul {
 .fullscreen {
     width: 100%;
     height: calc(100vh - var(--navbarHeight));
+    color: var(--lightColor);
+    background-color: var(--darkColor);
 }
