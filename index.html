@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,8 +25,8 @@
                 <li class="Name">Jules Antoine</li>
             </ul>
             <ul class="navigation-desktop">
-                <li onclick="redirection(); Projects()">Projects</li>
                 <li onclick="redirection(); About()">About</li>
+                <li onclick="redirection(); Projects()">Projects</li>
                 <li onclick="redirection(); Contact()">Contact</li>
             </ul>
             <input label="burger" class="checkbox" type="checkbox" name="" id="checkbox"/>
@@ -37,33 +37,45 @@
             </div>
             <div class="menu">
                 <ul class="navigation-mobile">
-                    <li onclick="redirection(); Projects()">Projects</li>
                     <li onclick="redirection(); About()">About</li>
+                    <li onclick="redirection(); Projects()">Projects</li>
                     <li onclick="redirection(); Contact()">Contact</li>
                 </ul>
             </div>
         </ul>
     </nav>
-    <div class="smooth-scroll-wrapper">
-        <div class="start">
-            <div class="container-text">
-                <h1 class="w odd letter">w</h1>
-                <h1 class="e even letter">e</h1>
-                <h1 class="l odd letter">l</h1>
-                <h1 class="c even letter">c</h1>
-                <h1 class="o odd letter">o</h1>
-                <h1 class="m even letter">m</h1>
-                <h1 class="e2 odd letter">e</h1>
-            </div>
-            <div class="container-img"></div>
-            <div class="container-discover">
-                <a href="#allscreen"><h2>discover</h2></a>
-                <a href="#allscreen"><i class="fa-solid fa-arrow-down"></i></a>
+    <section id="fs">
+        <div class="smooth-scroll-wrapper">
+            <div class="start">
+                <div class="container-text">
+                    <h1 class="w odd letter">w</h1>
+                    <h1 class="e even letter">e</h1>
+                    <h1 class="l odd letter">l</h1>
+                    <h1 class="c even letter">c</h1>
+                    <h1 class="o odd letter">o</h1>
+                    <h1 class="m even letter">m</h1>
+                    <h1 class="e2 odd letter">e</h1>
+                </div>
+                <div class="container-img"></div>
+                <div class="container-discover">
+                    <a href="#about"><h2>discover</h2></a>
+                    <a href="#about"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
             </div>
         </div>
-        <div class="fullscreen"></div>
-        <div id="allscreen" class="fullscreen">container #2</div>
-    </div>
+    </section>
+    <div id="separator"></div>
+    <section id="fs" id="about">
+        <div class="about-container">
+            <div class="header">
+                <div class="pp-container">
+                    <div class="circle-pp" id="white"></div>
+                    <img class="pp" src="./assets/pp.jpg" alt="Jules Antoine">
+                    <div class="circle-pp" id="blue"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="./JS/script.js" type="text/javascript"></script>
 </body>
 </html>
