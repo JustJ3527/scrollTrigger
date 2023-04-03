@@ -357,10 +357,15 @@ ul {
   }
 }
 
+@keyframes helloRotation {
+  0% {
+    transform: rotate(30deg);
+  }
+}
 .about-container {
   padding: 30px 10px;
   background-color: var(--darkColor);
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 .about-container .header {
@@ -368,34 +373,29 @@ ul {
   width: 100%;
   overflow: hidden;
   padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about-container .header .pp-container {
   width: 100%;
   height: 100%;
-  position: absolute;
+  display: contents;
 }
 .about-container .header .pp-container img {
-  height: 210px;
+  height: 80%;
   border-radius: 100%;
   aspect-ratio: 1/1;
-  position: relative;
-  top: 15px;
-  left: 15px;
   transition: all 0.5s;
 }
-.about-container .header .pp-container img:hover {
-  top: 0;
-  left: 0;
+.about-container .header .text-hello {
+  margin-left: 20px;
+  color: var(--lightColor);
+  font-weight: 100;
+  font-size: 3vw;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.about-container .header .pp-container .circle-pp {
-  height: 210px;
-  aspect-ratio: 1/1;
-  border-radius: 100%;
-  position: absolute;
-}
-.about-container .header .pp-container .circle-pp#blue {
-  border: solid 3px var(--secondaryLightColor);
-}
-.about-container .header .pp-container .circle-pp#white {
-  border: solid 3px var(--lightColor);
+.about-container .header .text-hello #hello-emoji {
+  animation: helloRotation;
 }/*# sourceMappingURL=style.css.map */
