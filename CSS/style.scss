@@ -14,6 +14,9 @@ $breakpoint1: 820px;
 ::-webkit-scrollbar {
     width: 0.5em;
     background: transparent;
+    @media screen and(width:$breakpoint1){
+        width: inherit;
+    }
 }
 
 ::-webkit-scrollbar-thumb {
