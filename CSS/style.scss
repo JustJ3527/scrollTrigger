@@ -10,14 +10,14 @@
 
 $breakpoint1: 820px;
 
-//Scrollbar
-::-webkit-scrollbar {
-    width: 0.5em;
-    background: transparent;
-    @media screen and(width:$breakpoint1){
-        width: inherit;
-    }
-}
+// //Scrollbar
+// ::-webkit-scrollbar {
+//     width: 0.5em;
+//     background: transparent;
+//     @media screen and(width:$breakpoint1){
+//         width: inherit;
+//     }
+// }
 
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.171);
@@ -363,6 +363,7 @@ ul {
 #fs {
     width: 100%;
     height: 100vh;
+    padding-top: var(--navbarHeight);
     overflow: hidden;
     border-bottom: solid 2px var(--lightColor);
 }
@@ -374,49 +375,28 @@ ul {
 //     @media screen and (max-width: $breakpoint1 ) {
 //         margin: 0;
 //     }
-// }
+//
 
-@keyframes helloRotation {
-    0% {
-        transform: rotate(30deg);
-    }
-}
-
-.about-container {
-    padding: 30px 10px;
-    background-color: var(--darkColor);
-    width: auto;
+.two-colomns-container {
+    width: 100%;
     height: 100%;
-    .header {
-        height: 30%;
-        width: 100%;
-        overflow: hidden;
-        padding: 10px 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    padding: 2% 3%;
+    .left-column {
+        width: 40%;
+        height: 100%;
         .pp-container {
             width: 100%;
             height: 100%;
-            display: contents;
+            object-fit: cover;
+            overflow: hidden;
             img {
-                height: 80%;
-                border-radius: 100%;
-                aspect-ratio: 1/1;
-                transition: all .5s;
-            }
-        }    
-        .text-hello {
-            margin-left: 20px;
-            color: var(--lightColor);
-            font-weight: 100;
-            font-size: 3vw;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            #hello-emoji {
-                animation: helloRotation;
+                height: 100%;
+                transform: translate(-5%, 0);
             }
         }
     }
-
+    .right-column {
+        width: auto;
+    }
 }
